@@ -10,7 +10,7 @@ const String colorSecond = "#512DA8"; //purpura;
 
 get colorAppBar => hexToColor("#000000");
 get colorBtnSecondary => hexToColor(colorSecond);
-get colorBtnPrimery => hexToColor("#FFFFFF");
+get colorBtnPrimary => hexToColor("#FFFFFF");
 get colorTextBtnPrimary => hexToColor(colorSecond);
 get colorProgressLine => hexToColor(colorSecond);
 get colorTextTitle => hexToColor("#0E0525");

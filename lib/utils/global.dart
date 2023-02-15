@@ -10,4 +10,5 @@ class Global {
   static Color color = Colors.black12;
   static int connected = -1;
   static String connectivityResult = "x";
+  static String msgNoConnectionInternet = "Conexiòn a internet no disponible";
 }
