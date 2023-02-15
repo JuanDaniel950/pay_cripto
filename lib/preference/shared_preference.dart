@@ -15,6 +15,7 @@ class PreferenceUser {
     try {
       _preferenceUser!.prefs = await SharedPreferences.getInstance();
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }
