@@ -69,7 +69,7 @@ class ConnectBloc {
     if (isConnected) {
       changeStatus(Global.connect);
     } else {
-      Future.delayed(Duration(seconds: 10), () {
+      Future.delayed(const Duration(seconds: 10), () {
         check();
       });
     }
@@ -86,6 +86,7 @@ class ConnectBloc {
       Map<String, dynamic> decodeData = json.decode(response.body);
       return decodeData['status'];
     } catch (e) {
+      // ignore: avoid_print
       print('error connect bloc $e');
     } finally {
       client.close();
