@@ -1,15 +1,46 @@
 import 'package:flutter/material.dart';
 
-class _ModalProgresState extends StatefulWidget {
-  const _ModalProgresState({super.key});
+class ModalProgresState extends StatelessWidget {
+  final bool inAsyncCall;
+  final double opacity;
+  final Color color;
+  final Widget progressIndicator;
+  final bool dismissible;
+  final Widget child;
 
-  @override
-  State<_ModalProgresState> createState() => __ModalProgresStateState();
-}
-
-class __ModalProgresStateState extends State<_ModalProgresState> {
+  const ModalProgresState(
+      {Key? key,
+      required this.inAsyncCall,
+      this.opacity = 0.3,
+      this.color = Colors.grey,
+      this.progressIndicator = const CircularProgressIndicator(),
+      this.dismissible = false,
+      required this.child})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Container();
+    List<Widget> widgetList = [];
+    widgetList.add(child);
+    if (inAsyncCall) {
+      Widget layOutProgressIndicator;
+      layOutProgressIndicator = Center(
+        child: progressIndicator,
+      );
+      final modal = [
+        Opacity(
+          opacity: opacity,
+          child: ModalBarrier(
+            dismissible: dismissible,
+            color: color,
+          ),
+        ),
+        layOutProgressIndicator
+      ];
+      widgetList += modal;
+    }
+
+    return Stack(
+      children: widgetList,
+    );
   }
 }

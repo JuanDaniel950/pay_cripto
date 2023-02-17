@@ -42,6 +42,8 @@ class PayProvaider {
     return listPay;
   }
 
+  //esto es lo q vamos a enviar al back para el pago y registro en red de solana,
+  //los datos del body son los requeridos en la libreria solana pay
   generatePay(
       PayModel paymodel, DateTime date, Function responseGenerate) async {
     var client = http.Client();
