@@ -9,3 +9,7 @@ Realiza cobros en Criptoactivos usando la red solana con su moneda estable USDC
 Genera Còdigos QR confirma el pago en la Red Solana
 
 Tener en cuenta que se usa la red solana, para realizar la pruebas deberàs tener fracciòn de moneda disponoble.
+
+#Juan Daniel Perez Baez
+dani.perez882@gmail.com
++573208713065
