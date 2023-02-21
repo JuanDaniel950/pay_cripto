@@ -34,8 +34,8 @@ get iconNotification => Icon(
       size: 25.0,
     );
 
-InputDecoration inputDecoration(
-    String label, Widget prefixIcon, Widget suffixIcon) {
+InputDecoration inputDecoration(String label, Widget? prefixIcon,
+    {Widget? suffixIcon}) {
   return InputDecoration(
     labelText: label,
     labelStyle: TextStyle(color: colorTextInputLabel),

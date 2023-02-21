@@ -14,15 +14,15 @@ String? validatorsAmount(String amount) {
 }
 
 //validate Solana Address
-String? validatorsAddress(String address) {
-  String addr = address.trim();
+String? validatorsAddress(String? address) {
+  String addr = address!.trim();
   if (addr.length < 44) return 'Address required at least 44 characters';
   return null;
 }
 
 //validate alias
-String? validatorAlias(String nemo) {
-  String alias = nemo.trim();
+String? validatorAlias(String? nemo) {
+  String alias = nemo!.trim();
   if (alias.length < 4) return 'Alias required at least 4 characters';
   return null;
 }
